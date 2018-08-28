@@ -7,7 +7,7 @@ steps:
     working_directory: ./
     tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
     dockerfile: Dockerfile
-  
+
   RuningTests:
     title: Running simple tests
     image: '${{BuildingDockerImage}}'
@@ -29,3 +29,5 @@ steps:
         set:
           - '${{BuildingDockerImage.imageId}}':
               - CF_QUALITY: false
+
+  
