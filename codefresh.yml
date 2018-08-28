@@ -11,4 +11,5 @@ steps:
   RuningTests:
     title: Running simple tests
     image: ${{CF_BUILD_ID}}
-    commands: npm test
+    commands: 
+      - npm test
