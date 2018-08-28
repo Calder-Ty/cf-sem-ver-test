@@ -10,6 +10,22 @@ steps:
   
   RuningTests:
     title: Running simple tests
-    image: ${{CF_BUILD_ID}}
-    commands: 
-      - npm test
+    image: '${{BuildingDockerImage}}'
+    working_directory: IMAGE_WORK_DIR
+    entry_point:
+      - /bin/sh
+      - /codefresh/volume/cf-generated/unit_test_script
+    create_file:
+      path: /codefresh/volume/cf-generated
+      name: unit_test_script
+      content: npm test
+    on_success:
+      metadata:
+        set:
+          - '${{BuildingDockerImage.imageId}}':
+              - CF_QUALITY: true
+    on_fail:
+      metadata:
+        set:
+          - '${{BuildingDockerImage.imageId}}':
+              - CF_QUALITY: false
