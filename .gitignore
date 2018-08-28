@@ -1,0 +1,7 @@
+# Environment stuff
+.env
+.vscode/
+
+# Node Stuff
+node_modules/
+js/

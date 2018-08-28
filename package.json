@@ -1,0 +1,29 @@
+{
+  "name": "ci-sem-ver",
+  "version": "1.0.0",
+  "description": "testing semantic versioning with cf",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha --opts mocha.opts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Calder-Ty/cf-sem-ver-test.git"
+  },
+  "author": "Tyler Calder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Calder-Ty/cf-sem-ver-test/issues"
+  },
+  "homepage": "https://github.com/Calder-Ty/cf-sem-ver-test#readme",
+  "dependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}

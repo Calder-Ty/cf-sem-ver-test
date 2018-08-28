@@ -1,0 +1,4 @@
+--require ts-node/register
+src/tests/**/test_*.ts
+--grep @integration
+--invert
