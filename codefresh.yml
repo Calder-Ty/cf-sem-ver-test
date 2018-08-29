@@ -38,6 +38,6 @@ steps:
       - /bin/sh
       - /codefresh/volume/cf-generated/buildNumScript
     create_file:
-      path: /codefresh/volume/cf-generated
+      path: '/codefresh/volume/cf-generated'
       nme: buildNumScript
       content: git tag
