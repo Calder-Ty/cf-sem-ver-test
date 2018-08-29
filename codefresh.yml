@@ -30,4 +30,14 @@ steps:
           - '${{BuildingDockerImage.imageId}}':
               - CF_QUALITY: false
 
-  
+  UpdateBuildNum:
+    title: Add Build Number
+    image: '${{BuildingDockerImage}}'
+    working_directory: IMAGE_WORK_DIR
+    entry_point:
+      - /bin/sh
+      - /codefresh/volume/cf-generated/buildNumScript
+    create_file:
+      path: /codefresh/volume/cf-generated
+      nme: buildNumScript
+      content: git tag
