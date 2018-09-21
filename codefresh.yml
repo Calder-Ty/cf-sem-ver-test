@@ -39,5 +39,5 @@ steps:
       - /codefresh/volume/cf-generated/buildNumScript
     create_file:
       path: '/codefresh/volume/cf-generated'
-      nme: buildNumScript
+      name: buildNumScript
       content: git tag
