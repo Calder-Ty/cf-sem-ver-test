@@ -40,4 +40,4 @@ steps:
     create_file:
       path: '/codefresh/volume/cf-generated'
       name: buildNumScript
-      content: git tag
+      content: npx semantic-release
